@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Bootstrap Assignment</title>
+</head>
+
+<body>
+  <!--4. Design a Navbar as shown below -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://brandlogos.net/wp-content/uploads/2021/09/bootstrap-logo.png"
+          alt="" width="55" height="45"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-outline-warning me-3" data-bs-toggle="modal"
+            data-bs-target="#login">Login</button>
+          <a href="#signup"><button class="btn btn-warning text-white" type="button" style="font-weight:500; font-size:18px;">Signup</button></a>
+
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. Create a Modal for accepting user name and password from the user
+         • It should have “Login” / “Cancel” buttons
+         • It should be placed exactly at the centre of the screen
+         • It should be opened when a button on the main page is clicked (Button name –
+         “Login to website”) -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="myName()">
+            <div class="mb-3">
+              <label for="username" class="col-form-label">Username:</label>
+              <input type="text" name="username" class="form-control" id="username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="col-form-label">Password:</label>
+              <input type="password" name="password" class="form-control" id="password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger text-white" data-bs-dismiss="modal" style="font-weight:500;font-size:18px;">Cancel</button>
+          <button type="submit" class="btn btn-warning text-white" style="font-weight:500;font-size:18px;">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 1. Create a web page to display 5 (nature related) images in a Carousel
+         • It should have next / prev buttons
+         • It should have indicators at the bottom -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/002/543/675/non_2x/environment-earth-day-in-the-hands-of-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-on-nature-field-grass-forest-conservation-concept-photo.jpg"
+          class="d-block" alt="..." width="100%" height="585">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>environment <span class="text-warning">Earth Day In the hands of trees growing seedlings bokeh green</span>  Background Female hand holding tree on nature...</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, exercitationem sint dolores ad tempora
+            maiores consequuntur molestias quo illo delectus et amet! Necessitatibus numquam dicta veniam porro impedit
+            placeat. Autem.</p>
+          <a href="#"><button class="btn btn-warning text-white" type="button" style="font-weight:500;font-size:18px;">Learn More</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/free-photo/hand-planting-seed-soil-plant-growing-step-concept_34152-110.jpg"
+          class="d-block" alt="..." width="100%" height="585">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><span class="text-warning">Hand planting seed in soil</span>  plant growing...</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, exercitationem sint dolores ad tempora
+            maiores consequuntur molestias quo illo delectus et amet! Necessitatibus numquam dicta veniam porro impedit
+            placeat. Autem.</p>
+          <a href="#"><button class="btn btn-warning text-white" type="button" style="font-weight:500;font-size:18px;">Learn More</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://english.sakshi.com/sites/default/files/article_images/2022/05/21/Planting%20trees-1653131480.jpg"
+          class="d-block " alt="..." width="100%" height="585">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>
+            An Afforestation project that helps farmers to <span class="text-warning">Nurture their land and enrich their lives...</span> </h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, exercitationem sint dolores ad tempora
+            maiores consequuntur molestias quo illo delectus et amet! Necessitatibus numquam dicta veniam porro impedit
+            placeat. Autem.</p>
+          <a href="#"><button class="btn btn-warning text-white" type="button" style="font-weight:500;font-size:18px;">Learn More</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg"
+          class="d-block " alt="..." width="100%" height="585">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nature <span class="text-warning">Water Lake</span> Place... </h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, exercitationem sint dolores ad tempora
+            maiores consequuntur molestias quo illo delectus et amet! Necessitatibus numquam dicta veniam porro impedit
+            placeat. Autem.</p>
+          <a href="#"><button class="btn btn-warning text-white " type="button" style="font-weight:500;font-size:18px;">Learn More</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://i0.wp.com/www.terrain.org/wp-content/uploads/2020/06/dear-america-mid.jpg?resize=1400%2C555&ssl=1"
+          class="d-block " alt="..." width="100%" height="585">
+        <div class="carousel-caption d-none d-md-block">
+          <h5> <span class="text-warning"> Environmental Magazine</span> of literature and place...</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, exercitationem sint dolores ad tempora
+            maiores consequuntur molestias quo illo delectus et amet! Necessitatibus numquam dicta veniam porro impedit
+            placeat. Autem.</p>
+          <a href="#"><button class="btn btn-warning text-white" type="button" style="font-weight:500;font-size:18px;">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- features page start -->
+  <section class="container mt-5" id="features">
+    <div class="section-header text-center ">
+      <h2>Our Features</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Aspernatur, ea.</p>
+    </div>
+  
+    <div class="row mt-5">
+      <div class="col-md-4 col-12">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="https://3.bp.blogspot.com/-CjlEFykTXkI/WTWOLO28MtI/AAAAAAAAgbQ/nnoU18TO0GMdzKCL5yedocvxMLd2skiUwCLcB/s1600/world-environment-day-%2BSAPOST.jpg"
+            class="card-img-top" alt="..." width="780" height="200">
+          <div class="card-body">
+            <h5 class="card-title text-warning">World Environment Day June 5 <sup>th</sup> </h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-warning text-white" style="font-weight:500;font-size:18px;">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.cnbctv18.com/wp-content/uploads/2022/06/World-environment-day-780x438.png"
+            class="card-img-top" alt="..." width="780" height="200">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Words of Wisdom from Mahatma gandhi.</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-warning text-white" style="font-weight:500;font-size:18px;">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card" style="width: 18rem;">
+          <img src="https://internationaleventday.com/wp-content/uploads/2020/06/world-environment-day-660x330.jpg"
+            class="card-img-top" alt="..." width="780" height="200">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Celebration and Speech of Environment Day</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-warning text-white" style="font-weight:500;font-size:18px;">Read More</a>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+  </section>
+
+
+  <!-- 2. Create a striped table in Bootstrap and display following records -->
+
+  <!-- pricing page start -->
+  <section class="container mt-5 mb-5 " id="pricing">
+    <div class="section-header text-center ">
+      <h2>Our Pricing</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Aspernatur, ea.</p>
+    </div>
+
+    <!-- progress start -->
+    <div class="row mt-5 g-2">
+      <div class="col-md-8 col-12 card ">
+
+        <table class="table table-striped">
+          <thead>
+            <tr class="bg-primary">
+              <th colspan="8">Most runs</th>
+            </tr>
+            <tr>
+
+              <th scope="col">Player</th>
+              <th scope="col">Span</th>
+              <th scope="col">Mat</th>
+              <th scope="col">Inns</th>
+              <th scope="col">No</th>
+              <th scope="col">Runs</th>
+              <th scope="col">HS</th>
+              <th scope="col">Ave</th>
+            </tr>
+
+            <tr>
+          </thead>
+          <tbody>
+           <td>SR Tendulkar(INDIA)</td>
+            <td>1989-2013</td>
+            <td>200</td>
+            <td>329</td>
+            <td>33</td>
+            <td>15921</td>
+            <td>248*</td>
+            <td>53.78</td>
+            </tr>
+            <tr>
+
+              <td>RT Ponting(AUS)</td>
+              <td>1995-2012</td>
+              <td>168</td>
+              <td>287</td>
+              <td>29</td>
+              <td>13378</td>
+              <td>257</td>
+              <td>51.85</td>
+            </tr>
+            <tr>
+              <td>JH Kaills(ICC/SA)</td>
+              <td>1995-2013</td>
+              <td>166</td>
+              <td>280</td>
+              <td>40</td>
+              <td>13289</td>
+              <td>224</td>
+              <td>55.37</td>
+            </tr>
+            <tr>
+              <td>R Dravid(ICC/INDIA)</td>
+              <td>1996-2012</td>
+              <td>164</td>
+              <td>286</td>
+              <td>32</td>
+              <td>13288</td>
+              <td>270</td>
+              <td>52.31</td>
+            </tr>
+            <tr>
+              <td>AN Cook(ENG)</td>
+              <td>2006-2018</td>
+              <td>161</td>
+              <td>291</td>
+              <td>16</td>
+              <td>12472</td>
+              <td>294</td>
+              <td>45.35</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+      <div class="col-md-4 col-12 card mycard">
+        <div class="progress ">
+          <h6>10%</h6>
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress mt-4">
+          <h6>25%</h6>
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress mt-4">
+          <h6>50%</h6>
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress mt-4">
+          <h6>75%</h6>
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress mt-4">
+          <h6>100%</h6>
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%"
+            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- faq pages start -->
+  <section class="mt-5 mb-5" id="faq">
+    <div class="container">
+      <div class="section-header text-center pb-5">
+        <h2>Our Faq</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Aspernatur, ea.</p>
+      </div>
+      <div class="mt-4 p-5 bg-primary text-white rounded">
+        <h1 class="text-warning">Frequently Asked Questions</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat..</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- about page start -->
+  <section class="container pb-5" id="about">
+    <div class="section-header text-center pb-5">
+      <h2> About Us</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Aspernatur, ea.</p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 col-12 card pt-3 pb-3">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrNpy-VFsamgAJwdf6FTEquDBtMRe5s6nia3uvr86W4AWdP5cZbtdTNqXF2yeFiFiEh9Q&usqp=CAU"
+          alt="" width="" height="">
+      </div>
+      <div class="col-md-6 col-12 ">
+        <h4 class="text-warning px-5">WORLD ENVIRONMENT DAY</h4>
+        <p class="px-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius inventore quis, <br>
+          omnis asperiores blanditiis accusantium ratione aut nemo optio fugit natus <br>
+          eveniet velit iure minima maiores alias cum saepe facilis quibusdam quasi consectetur non.<br>
+          Error, animi tempore pariatur itaque at aliquam. Quos rerum veniam cum<br>
+          consectetur adipisci voluptatum temporibus sint.</p>
+        <a href="#" class="px-5"><button class="btn btn-warning text-white" type="button" style="font-weight:500;font-size:18px;">Read More</button></a>
+      </div>
+    </div>
+  </section>
+  <!-- 5. Design a form as shown below singup page -->
+
+  <section id="signup">
+    <div class="section-header text-center">
+      <h2> Contact Us</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Aspernatur, ea.</p>
+    </div>
+    <div class="myform">
+      <form class=" myform1 row g-3 mt-5 ">
+        <h3>SignUp</h3>
+        <p>Please fill in this form to create an account!</p>
+        <div class="col-md-6 ">
+          <label for="inputEmail4" class="form-label"></label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label"></label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label"></label>
+          <input type="email" class="form-control" id="inputAddress" placeholder="Eamil">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label"></label>
+          <input type="password" class="form-control" id="inputAddress2" placeholder="Password">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label"></label>
+          <input type="password" class="form-control" id="inputAddress2" placeholder="Confirm Password">
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              I accept the <a href="#">Terms of Use & Privacy Policy</a>
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-warning text-white" style="font-weight:500;font-size:18px;">Sign Up</button>
+        </div>
+      </form>
+      <p class="text-white text-center mt-2 ">Already have an account? <a href="#login" class="text-white">Login
+          Here</a></p>
+    </div>
+  </section>
+
+  <!-- footer start -->
+  <footer class="bg-dark">
+    <div class="row">
+      <div class="demo col-md-6 col-12 text-white pt-4 ">
+        <h5 class="pb-2 text-warning">About The Company</h5>
+        <p>Lorem, ipsum dolor sit amet <br>
+          consectetur adipisicing elit.<br>
+          Ullam repellat perspiciatis delectus<br>
+          suscipit ipsa doloribus.</p>
+        <!-- spinner start -->
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-12 text-white ">
+        <ul class="demo">
+          <li class="demo1" style="margin-left: 10%;"><i class="bi bi-geo-alt" style="float: left; margin-left: 30px;"></i>&nbsp;&nbsp;&nbsp; address 123 room abc apt.</li>
+          <li class="demo1"><i class="bi bi-telephone" style="float: left; margin-right:62px;"></i>&nbsp;&nbsp;&nbsp; +91 88 77 66 55</li>
+          <li class="demo1"><i class="bi bi-envelope-open" style="float: left;"></i>&nbsp;&nbsp;&nbsp; developer34@gmail.com</li>
+        </ul>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-linkedin"></i>
+        <i class="bi bi-skype"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-telegram"></i>
+        <i class="bi bi-twitter"></i>
+
+
+      </div>
+    </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- javascript link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    function myName() {
+      alert("Successfully submit!");
+    }
+  </script>
+</body>
+
+</html>

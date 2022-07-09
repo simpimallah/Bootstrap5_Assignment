@@ -1,0 +1,156 @@
+/* navbar design start */
+.carousel-item{
+    height: 100%;
+    min-height: 300px;
+}
+.carousel-inner::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.carousel-caption h5{
+    color: #fff;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.carousel-caption p{
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.9;
+}
+
+/* footer design start */
+footer,.col-md-6,.demo{
+    list-style-type: none;
+    padding: 10px 40px;
+}
+.col-md-6,.demo,.demo1{
+    padding: 10px 38px;
+    float: right;
+} 
+.col-md-6 i{
+    font-size: 25px;
+    padding: 0px 20px;
+    float: right;
+}
+.col-md-6 i:hover{
+    color: #ffcc00;
+    cursor: pointer;
+}
+.mycard{
+    padding: 20px 25px;
+   
+}
+/* signup page design */
+.myform{
+    background-color:blue;
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    margin-left: 20%;
+    padding: 10px 90px;
+    opacity: 0.6;
+    margin-bottom: 40px;
+
+}
+.myform1{
+    width: 100%;
+    height: 20%;
+    margin-left: 40%;
+    background-color: #ffff;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    
+    }
+    .myform1 p{
+        font-size: 15px;
+        color: #989E9E;
+    }
+    h2{
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 500;
+        color: #989E9E;
+
+    }
+.myform1 input[type=text]{
+    padding: 12px 12px
+}
+.myform1 input[type=email]{
+    padding: 12px 12px
+}   
+.myform1 input[type=password]{
+    padding: 12px 12px
+}
+button{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+/* media query start */
+
+
+
+  
+  
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (max-width: 768px) {
+    
+   .myform{
+    width: 80%;
+    height: 50%;
+    margin-top: 20px;
+    margin-left: 15%;
+    padding: 10px 90px;
+   }
+   .myform1{
+    width: 100%;
+    height: 20%;
+    margin-left: 40%;
+    padding: 10px 50px;
+   }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (max-width: 992px) {
+    .myform{
+        width: 100%;
+        height: 50%;
+        margin-top: 20px;
+        margin-right: 10%;
+        padding: 10px 90px;
+       }
+       .myform1{
+        width: 100%;
+        height: 20%;
+        margin-left: 40%;
+        padding: 10px 50px;
+       }
+   
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (max-width: 1200px) {
+    .myform{
+        width: 80%;
+        height: 50%;
+        margin-top: 20px;
+        margin-left: 12%;
+        padding: 10px 90px;
+       }
+       .myform1{
+        width: 100%;
+        height: 20%;
+        margin-left: 40%;
+        padding: 10px 50px;
+       }
+    
+  }
